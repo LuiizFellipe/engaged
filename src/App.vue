@@ -1,30 +1,46 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <header-app></header-app>
+  <router-view />
 </template>
+
+<script>
+// @ is an alias to /src
+import HeaderApp from "@/components/HeaderApp.vue";
+
+export default {
+  components: {
+    HeaderApp,
+  },
+};
+</script>
+
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: "Rajdhani", sans-serif;
+}
+.container {
+  max-width: 1180px;
+  display: flex;
+}
+.columns {
+  width: 100%;
 }
 
-nav {
-  padding: 30px;
+header a {
+  transition: 0.4s;
+  color: black !important;
 }
-
-nav a {
+.radius{
+  border-radius: 10px;
+}
+.border-none{
+  border:none !important;
+}
+a:hover {
   font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+  transition: 0.4s;
+  text-transform: none !important;
+  text-decoration: none !important;
 }
 </style>
